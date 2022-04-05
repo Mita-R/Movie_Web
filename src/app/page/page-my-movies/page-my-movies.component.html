@@ -1,0 +1,36 @@
+<body>
+<div class="header">
+    <h2 class="logo">movie<span class="logo2">Blog</span></h2>
+    <ul>
+        <li>
+            <a href="#" class="active">Home</a>
+        </li>
+    </ul>
+        
+</div>
+
+<div class="my_movies" *ngFor ="let movie of readMovies">
+<img src='../../../assets/images/Movieimg.jpg' width="400" height="300" alt=''>
+<div >
+<h3>{{movie.movie_name}}</h3>
+<p>{{movie.movie_description}}</p>
+<p>{{movie.movie_released_date | date:'longDate'}}</p>
+<button [routerLink]="[ '/viewMovie', movie.id]"  class="button button2">View Movie</button>
+&nbsp;
+<button class="button button3" (click) = deleteId(movie.id)>Delete Movie</button>
+</div>
+
+</div>
+<div class="footer">
+    <div class="footer-content">
+        <!--add all information -->
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+         </ul>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,33 @@
+<div class="header">
+  <h2 class="logo">movie<span>Blog</span></h2>
+  <ul>
+    <li>
+      <a href="#" class="active">Home</a>
+    </li>
+  </ul>
+    
+</div>
+<h2 class="title">My Favourite Movie</h2>
+<div class="my_movies" >
+  <img src='../../../assets/images/showing.jpg' width="600" height="400" alt=''>
+  <div >
+    <h3 >{{name}}</h3>
+<p>{{des}}</p>
+<p>{{release  | date:'longDate'}}</p>
+  <button [routerLink]= "['/editMovie', id]"  class="button button2">Edit Movie</button>
+  
+  </div>
+  
+  </div>
+  <div class="footer">
+    <div class="footer-content">
+      <!--add all information -->
+      <ul class="socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+       </ul>
+  </div>
+  </div>

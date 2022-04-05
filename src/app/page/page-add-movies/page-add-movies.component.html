@@ -1,0 +1,57 @@
+
+<body>
+  <section>
+    <div class="header">
+      <h2 class="logo">movie<span>Blog</span></h2>
+      <ul>
+        <li>
+          <a href="#" class="active">Home</a>
+        </li>
+      </ul>
+        
+    </div>
+    <div *ngif="erromsg">
+      <h3>{{erromsg}}</h3>
+    </div>
+    <div *ngif="successmsg">
+      <h3>{{successmsg}}</h3>
+    </div>
+    <form [formGroup] = "movieForm" (ngSubmit) = "movieSubmit()">
+      <div class="title">
+        <h2>Add one more Favourite movie </h2>
+      </div>
+      <div class="half">
+        <div class="item">
+          <label for="name">MOVIE NAME</label>
+          <input type="text" class="form-control" formControlName="movie_name" id = "name" placeholder=" Enter Movie Name">
+        </div>
+        <div class="item">
+          <label for="email">MOVIE RELEASE DATE</label>
+          <input type="text" class="form-control " formControlName="movie_released_date" id = "email" placeholder="Enter date movie was released">
+        </div>
+      </div>
+      <div class="full">
+        <label for="message">MOVIE DESCRIPTION</label>
+        <textarea name="" class="form-control" id = "message" formControlName="movie_description" placeholder="What is the movie all about..."></textarea>
+      </div>
+      <div class="action">
+        <input type="submit" value = "ADD TO MOVIE LIST">
+        
+      </div>
+     
+    </form>
+  </section>
+    <div class="footer">
+      <div class="footer-content">
+        <!--add all information -->
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+         </ul>
+    </div>
+    </div>
+ 
+  </body>
