@@ -10,13 +10,8 @@
       </ul>
         
     </div>
-    <div *ngif="erromsg">
-      <h3>{{erromsg}}</h3>
-    </div>
-    <div *ngif="successmsg">
-      <h3>{{successmsg}}</h3>
-    </div>
-    <form [formGroup] = "movieForm" (ngSubmit) = "movieSubmit()">
+    
+    <form [formGroup] = "movieForm" (ngSubmit) = "movieSubmit()" method="POST" enctype="multipart/form-data">
       <div class="title">
         <h2>Add one more Favourite movie </h2>
       </div>
@@ -28,6 +23,12 @@
         <div class="item">
           <label for="email">MOVIE RELEASE DATE</label>
           <input type="text" class="form-control " formControlName="movie_released_date" id = "email" placeholder="Enter date movie was released">
+        </div>
+      </div>
+      <div class="half">
+        <div class="item">
+          <label for="email">MOVIE IMAGE</label>
+          <input type="file" class="form-control " formControlName="movie_image" id = "email" placeholder="Upload movie image">
         </div>
       </div>
       <div class="full">

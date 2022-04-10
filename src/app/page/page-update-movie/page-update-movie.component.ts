@@ -24,7 +24,8 @@ export class PageUpdateMovieComponent implements OnInit {
       this.movieForm.patchValue({
         'movie_name':res[0].movie_name,
         'movie_description':res[0].movie_description,
-        'movie_released_date':res[0].movie_released_date
+        'movie_released_date':res[0].movie_released_date,
+        'movie_image':res[0].movie_image
 
       })
     })
@@ -34,6 +35,7 @@ export class PageUpdateMovieComponent implements OnInit {
     'movie_name':new FormControl('',Validators.required),
     'movie_description':new FormControl('',Validators.required),
     'movie_released_date':new FormControl('',Validators.required),
+    'movie_image':new FormControl('',Validators.required),
 
   });
 

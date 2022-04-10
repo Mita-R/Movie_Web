@@ -20,7 +20,7 @@ export class MoviesService {
 
   addMovie(data:any):Observable<any> {
     console.log(data,"ADDED A MOVIE")
-    return this.http.post(`${this.baseUrl}/addmovie`,data);
+    return this.http.post(`${this.baseUrl}/movie`,data);
   }
 
   deleteMovie(id:any):Observable<any> {
@@ -28,6 +28,6 @@ export class MoviesService {
   }
 
   updateMovie(data:any,id:any):Observable<any> {
-    return this.http.put(`${this.baseUrl}/updatemovie/${id}`,data);
+    return this.http.put(`${this.baseUrl}/movie/${id}`,data);
   }
 }

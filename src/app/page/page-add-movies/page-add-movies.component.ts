@@ -19,6 +19,7 @@ export class PageAddMoviesComponent implements OnInit {
     'movie_name':new FormControl('',Validators.required),
     'movie_description':new FormControl('',Validators.required),
     'movie_released_date':new FormControl('',Validators.required),
+    'movie_image':new FormControl('',Validators.required),
 
   });
 
